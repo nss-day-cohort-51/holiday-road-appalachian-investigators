@@ -1,9 +1,7 @@
-export const getParks = () => {
-
-    return fetch("https://developer.nps.gov/api/v1/parks?&api_key=JpB5REQaYx3Bo5d4goXla9Xz0JXeSN6XiVnVxmQB")
+import { settings } from "../Settings.js"
+export const getParks = (state) => {
+    return fetch(`https://developer.nps.gov/api/v1/parks?stateCode=${state}&api_key=${settings.npsKey}`)
     .then(response => response.json())
-    .then(data => console.log(data))
-    
-    
+    .then(data => data)
 }
 

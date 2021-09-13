@@ -3,7 +3,7 @@ import { getStates } from "./statesDataManager.js";
 
 export const statelist = (allStates) => {
 
-    let postHTML = '<select class="states_sec"> <option value="0"> please select state </option> '; 
+    let postHTML = '<select id="states_sec"> <option value="0"> please select state </option> '; 
 
     for (const stateObject of allStates) {
         postHTML += states(stateObject)
