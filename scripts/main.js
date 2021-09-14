@@ -4,8 +4,27 @@ import { parkPost } from "./parks/ParkPost.js";
 import { states } from "./statestuff.js/state.js";
 import { statelist } from "./statestuff.js/stateData.js";
 import { getStates } from "./statestuff.js/statesDataManager.js";
+import { atList } from "./attractions/AttractionData.js";
+import { getAttractions } from "./attractions/AttractionDataManager.js";
+import { atPost } from "./attractions/AttractionPost.js";
 
+const atEntryElement = document.querySelector (".attraction_info");
 
+const atPostEntryElement = document.querySelector (".attraction_post");
+
+const showAtDropDown = () => {
+  getAttractions().then(allAt => {
+atEntryElement.innerHTML = atList(allAt)
+  })
+}
+
+//atEntryElement.addEventListener('change', event => {
+  //if (event.target.id === "attraction_info"){
+    //getSingleAt(event.target.value).then(taco => {
+      //atPostEntryElement.innerHTML = atPost(taco)
+   // })
+  //}
+//})
 
 const entryElement = document.querySelector(".states_sec");
 const showStateDrpDwn = () => { 
@@ -53,4 +72,5 @@ const parkEntryElement = document.querySelector(".parks_sec");
     // showParkDrpDwn();
     showStateDrpDwn();
     getParks();
+    showAtDropDown();
  
