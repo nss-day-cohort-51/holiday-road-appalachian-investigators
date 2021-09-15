@@ -10,6 +10,10 @@ import { getSingleAt } from "./attractions/AttractionDataManager.js";
 import { getEaten, getSingleEat } from "./eateries/EateryDataManager.js";
 import { eatList } from "./eateries/eateryData.js";
 import { eatPost } from "./eateries/EateryPost.js";
+import { getWeather } from "./weather/WeatherDataManager.js";
+import { weatherPost } from "./weather/weatherPost.js";
+import { weatherList } from "./weather/WeatherList.js";
+
 
 
 const atEntryElement = document.querySelector (".attraction_info");
@@ -19,6 +23,8 @@ const atPostEntryElement = document.querySelector (".attraction_post");
 const eatEntryElement = document.querySelector (".eaten_drp");
 
 const eatPostEntryElement = document.querySelector (".eat_info");
+
+const parkEntryElement = document.querySelector(".parks_sec");
 
 const showEatDrpDown = () => {
   getEaten().then(eatAll => {
@@ -68,13 +74,17 @@ parkEntryElement.addEventListener('change', event => {
   getSinglePark(event.target.value).then(data => {
     console.log(data)
     parkPostElement.innerHTML = parkPost(data.data[0])
+  getWeather(data.data[0].addresses[0].postalCode)
+  .then(weather => {
+    parkEntryElement.innerHTML = weatherList(weather.list)
+  })
   })
   }
 })
 
 }})
 
-const parkEntryElement = document.querySelector(".parks_sec");
+
 // const showParkDrpDwn = () => {
 //   getParks().then(data => {
 //     parkEntryElement.innerHTML = parklist(data.data)
@@ -94,6 +104,6 @@ const parkEntryElement = document.querySelector(".parks_sec");
 
     // showParkDrpDwn();
     showStateDrpDwn();
-    getParks();
+    // getParks();
     showAtDropDown();
     showEatDrpDown();
