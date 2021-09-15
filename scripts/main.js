@@ -8,10 +8,22 @@ import { atList } from "./attractions/AttractionData.js";
 import { getAttractions } from "./attractions/AttractionDataManager.js";
 import { atPost } from "./attractions/AttractionPost.js";
 import { getSingleAt } from "./attractions/AttractionDataManager.js";
+import { getEaten } from "./eateries/EateryDataManager.js";
+import { eatery } from "./eateries/eatery.js";
+import { eatList } from "./eateries/eateryData.js";
 
 const atEntryElement = document.querySelector (".attraction_info");
 
 const atPostEntryElement = document.querySelector (".attraction_post");
+
+const eatEntryElement = document.querySelector (".eaten_drp");
+
+const showEatDrpDown = () => {
+  getEaten().then(eatAll => {
+    eatEntryElement.innerHTML = eatList(eatAll)
+      })
+
+}
 
 const showAtDropDown = () => {
   getAttractions().then(allAt => {
@@ -74,4 +86,4 @@ const parkEntryElement = document.querySelector(".parks_sec");
     showStateDrpDwn();
     getParks();
     showAtDropDown();
- 
+    showEatDrpDown();
