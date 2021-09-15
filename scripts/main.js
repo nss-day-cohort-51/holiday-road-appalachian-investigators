@@ -13,6 +13,8 @@ import { eatPost } from "./eateries/EateryPost.js";
 import { getWeather } from "./weather/WeatherDataManager.js";
 import { weatherPost } from "./weather/weatherPost.js";
 import { weatherList } from "./weather/WeatherList.js";
+import { createPost } from "./aside/asideDatamanager.js";
+import { asideCard } from "./aside/asidePost.js";
 
 
 
@@ -62,6 +64,33 @@ const showStateDrpDwn = () => {
     })  
   }
 
+// const showAsideEntry = () => {
+//   (asideEntryElement.innerHTML = asideCard());
+
+// }
+
+// const asideEntryElement = document.querySelector(".aside")
+// asideEntryElement.addEventListener("click", event => {
+//   event.preventDefault();
+//   if (event.target.class === dropdown) {
+//     const state = document.querySelector("select[name=`states_sec`]").value
+//     const park = document.querySelector("select[name=`park_sec`]").value
+//     const attraction = document.querySelector("select[name=``attraction_info]").value
+//     const eatery = document.querySelector("select[name=`eat_info`]").value
+
+//     const postObject = {
+//       state: state,
+//       park: park,
+//       attraction: attraction,
+//       eatery: eatery
+//     }
+//     createPost(postObject)
+//     .then(dbResponse => {
+//       showAsidecCard
+//     })
+//   }
+// })
+
 entryElement.addEventListener('change', event => {
   if(event.target.id === "states_sec"){
     getParks(event.target.value).then(data => {
@@ -107,3 +136,4 @@ parkEntryElement.addEventListener('change', event => {
     // getParks();
     showAtDropDown();
     showEatDrpDown();
+  // showAsideEntry();
