@@ -7,6 +7,7 @@ import { getStates } from "./statestuff.js/statesDataManager.js";
 import { atList } from "./attractions/AttractionData.js";
 import { getAttractions } from "./attractions/AttractionDataManager.js";
 import { atPost } from "./attractions/AttractionPost.js";
+import { getSingleAt } from "./attractions/AttractionDataManager.js";
 
 const atEntryElement = document.querySelector (".attraction_info");
 
@@ -18,13 +19,13 @@ atEntryElement.innerHTML = atList(allAt)
   })
 }
 
-//atEntryElement.addEventListener('change', event => {
-  //if (event.target.id === "attraction_info"){
-    //getSingleAt(event.target.value).then(taco => {
-      //atPostEntryElement.innerHTML = atPost(taco)
-   // })
-  //}
-//})
+atEntryElement.addEventListener('change', event => {
+  if (event.target.id === "attraction_info"){
+    getSingleAt(event.target.value).then(taco => {
+      atPostEntryElement.innerHTML = atPost(taco)
+    })
+  }
+})
 
 const entryElement = document.querySelector(".states_sec");
 const showStateDrpDwn = () => { 
