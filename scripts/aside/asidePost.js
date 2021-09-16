@@ -6,8 +6,9 @@ export const asideCard = (park, eatery, attraction) => {
    const tripsPostEntryElement = document.querySelector(".aside")
    const asidePost = `
  <div>
-      <h3>
-            ${park.data[0].fullName}
+      <h3>  
+         ${park.data[0].states},
+         ${park.data[0].fullName}
       </h3>
  </div>
  <div>
