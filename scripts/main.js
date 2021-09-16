@@ -13,10 +13,10 @@ import { eatPost } from "./eateries/EateryPost.js";
 import { getWeather } from "./weather/WeatherDataManager.js";
 import { weatherPost } from "./weather/weatherPost.js";
 import { weatherList } from "./weather/WeatherList.js";
-import { createPost } from "./aside/asideDatamanager.js";
+import { createPost, getTrips } from "./aside/asideDatamanager.js";
 import { asideCard } from "./aside/asidePost.js";
-
-
+import { asideList } from "./aside/asideData.js";
+import { tripList } from "./aside/TripsList.js";
 
 const atEntryElement = document.querySelector (".attraction_info");
 
@@ -64,32 +64,38 @@ const showStateDrpDwn = () => {
     })  
   }
 
-// const showAsideEntry = () => {
-//   (asideEntryElement.innerHTML = asideCard());
 
-// }
+const asideEntryElement = document.querySelector(".selections_sec")
+asideEntryElement.addEventListener("click", event => {
+  event.preventDefault();
+  if (event.target.id === "trip_submit") {
+    
+    const park = document.querySelector("select[id='park_sec']").value
+    const attraction = document.querySelector("select[id='attraction_info']").value
+    const eatery = document.querySelector("select[id='eat_info']").value
 
-// const asideEntryElement = document.querySelector(".aside")
-// asideEntryElement.addEventListener("click", event => {
-//   event.preventDefault();
-//   if (event.target.class === dropdown) {
-//     const state = document.querySelector("select[name=`states_sec`]").value
-//     const park = document.querySelector("select[name=`park_sec`]").value
-//     const attraction = document.querySelector("select[name=``attraction_info]").value
-//     const eatery = document.querySelector("select[name=`eat_info`]").value
+    const postObject = {
+     
+      park: park,
+      attraction: parseInt(attraction),
+      eatery: parseInt(eatery)
+    }
+    createPost(postObject)
+    .then( ()  => {
+     getTrips().then(allTrips =>{
+       tripList(allTrips)
+     })
+    });
+  }
+})
 
-//     const postObject = {
-//       state: state,
-//       park: park,
-//       attraction: attraction,
-//       eatery: eatery
-//     }
-//     createPost(postObject)
-//     .then(dbResponse => {
-//       showAsidecCard
-//     })
-//   }
-// })
+
+const showAsideList = () =>{
+  getTrips().then(allTrips =>{
+    tripList(allTrips)
+})
+} 
+
 
 entryElement.addEventListener('change', event => {
   if(event.target.id === "states_sec"){
@@ -105,7 +111,7 @@ parkEntryElement.addEventListener('change', event => {
     parkPostElement.innerHTML = parkPost(data.data[0])
   getWeather(data.data[0].addresses[0].postalCode)
   .then(weather => {
-    parkEntryElement.innerHTML = weatherList(weather.list)
+    parkPostElement.innerHTML += weatherList(weather.list)
   })
   })
   }
@@ -136,4 +142,4 @@ parkEntryElement.addEventListener('change', event => {
     // getParks();
     showAtDropDown();
     showEatDrpDown();
-  // showAsideEntry();
+    showAsideList();
