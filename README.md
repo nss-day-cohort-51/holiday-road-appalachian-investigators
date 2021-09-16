@@ -15,7 +15,7 @@ Listed below are the ordered steps to take to begin booking your once in a life 
 1. You may then select you favorite National Park based on the information provided such as an image, description or weather for your desired day.
 1. Once your park is chosen you will need to select a bizzarary from any state of your choice. Remember this a cross country trip so make your choice from ANY state in the United States!
 1. Upon selecting your bizzarary you will need to also select an eatery. Just as with bizzararies you may select your most sought after eatery from any state of your choice.
-1. Once you have decided on your most influencial trip, select our "Save Trip' button located below the eateries section to save you most desired trips in our "Saved Trips" section loacted on the right side of the page.
+1. Once you have decided on your most influencial trip, select our "Save Trip' button located below the eateries section to save your most desired trips in our "Saved Trips" section loacted on the right side of the page in the aside.
 
 ## Future Connections
 
@@ -27,5 +27,5 @@ Each section of our project has been created using mainly JavaScript, JSON and H
 
 ## Documentation
 
-| [Wireframe](./Images/figma-holiday-road.png) | [dbdiagram](./Images/DBDiagram.png) | [Logo](./Images/logo.png) 
+| [Wireframe](./personas/Images/figma-holiday-road.png) | [dbdiagram](./personas/Images/DBDiagram.png) | [Logo](./personas/Images/logo.png) 
 
