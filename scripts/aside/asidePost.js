@@ -1,24 +1,27 @@
-export const asideCard = (tripObject) => {
-    return`
-    <div>
-   <select value=""
-    name="states_sec"
-    />
+import { getSinglePark } from "../parks/ParkDataManager.js"
+
+
+
+export const asideCard = (park, eatery, attraction) => {
+   const tripsPostEntryElement = document.querySelector(".aside")
+   const asidePost = `
+ <div>
+      <h3>
+            ${park.data[0].fullName}
+      </h3>
  </div>
  <div>
-    <select value=""
-    name="park_sec"
-    />
+      <h3>
+            ${eatery.businessName}
+      </h3>
  </div>
  <div>
-    <select value=""
-    name="attraction_info"
-    />
- </div>
- <div>
-    <select value=""
-    name="eat_info"
-    />
- </div>
+      <h3>
+         ${attraction.name}
+      </h3>
+ </div>  
      `
+     tripsPostEntryElement.innerHTML += asidePost
 }
+
+

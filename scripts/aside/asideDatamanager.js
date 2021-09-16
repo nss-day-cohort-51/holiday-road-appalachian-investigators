@@ -1,5 +1,5 @@
 export const createPost = postObj => {
-    return fetch("http://localhost:8088/posts", {
+    return fetch("http://localhost:8088/trips", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -10,4 +10,14 @@ export const createPost = postObj => {
         .then(response => response.json())
   }
 
-//add getTrips fetch here
+
+  export const getTrips = () => {
+	return fetch("http://localhost:8088/trips")
+	.then(response => response.json()) 
+
+	.then(parsedResponse => {
+		
+		return parsedResponse;
+	})
+}
+
