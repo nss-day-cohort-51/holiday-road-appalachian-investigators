@@ -5,3 +5,13 @@
 @import url(./footer.css);
 
 @import url(./header.css);
+
+header {
+
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    padding: 20px;
+    background-image: url(./nature5.jpg);
+    text-align: center;
+}
