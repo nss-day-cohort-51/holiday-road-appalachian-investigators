@@ -53,6 +53,7 @@
   width: 600px;
   height: 350px;
   margin-left: 15px;
+  border-radius: 15px;
 }
 .park_data h2 {
   width: 650px;
@@ -86,6 +87,7 @@
   width: 600px;
   height: 350px;
   margin-left: 15px;
+  border-radius: 15px;
 }
 
 .attraction_header h2 {
@@ -117,6 +119,7 @@
   width: 600px;
   height: 350px;
   margin-left: 15px;
+  border-radius: 15px;
 }
 .eat_info div h2 {
   width: 650px;
@@ -134,11 +137,15 @@
 /* BUTTON SECTION  */
 
 #trip_submit {
-  width: 160px;
-  height: 25px;
-  border-radius: 5px;
+  width: 300px;
+  height: 40px;
+  border-radius: 10px;
   border-style: none;
-  background-color: lightseagreen;
+  background-color: gainsboro;
+  margin: 20px;
+  font-size: 20px;
+  color:  rgb(0, 0, 0);
+
 }
 .button_div {
   display: flex;
