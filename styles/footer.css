@@ -1,0 +1,38 @@
+.footer-logo {
+    height: 60px;
+    width: 60px;
+    padding: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact {
+    text-align: center;
+    font-size: 15px;
+    color:white;
+    padding-top: 4px;
+}
+
+a {
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    color: black;
+    padding: 15px;
+}
+
+footer {
+    background-color: #006cff;;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 10px;
+    color: #ffffffb2;
+}
+
+.container {
+    color: rgb(247, 247, 109);
+    text-align: center;
+}
