@@ -5,41 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="styles/main.css" />
   </head>
   <body>
     <header></header>
 
-<main class="selections_sec">
+    <main class="selections_sec">
+      <div class="main_sec">
+        <div class="state_div">
+          <h3>Select a state below!</h3>
+          <section class="states_sec"></section>
+        </div>
+        <section class="first_sec">
+          <section class="parks_sec">
+            <div class="weather_sec"></div>
+          </section>
 
-    <section class="first_sec">
-      <section class="states_sec"></section>
-
-      <section class="parks_sec">
-        <div class="weather_sec"></div>
-      </section>
-
-      <section class="park_info"></section>
-    </section>
-
-    <section class="atsec">
-      <section class="attraction_info"></section>
-
-      <section class="attraction_post"></section>
-    </section>
-
-    <section class="eatsec">
-      <section class="eaten_drp"></section>
-
-      <section class="eat_info"></section>
-    </section>
-
-    <button id="trip_submit" > Save Trip </button>
-
-    <section class="aside">
-
-    </section>
-    
-</main>
+          <section class="park_info"></section>
+        </section>
+        <section class="second_sec">
+          <section class="atsec">
+            <section class="attraction_info"></section>
+            <div class="attraction">
+              <section class="attraction_post"></section>
+              <div class="attraction_pic">
+                <img
+                  src="/Images/travel.jpg.jpg"
+                  alt="Photo of a man at the airport"
+                />
+              </div>
+            </div>
+          </section>
+        </section>
+        <section class="third_sec">
+          <section class="eatsec">
+            <section class="eaten_drp"></section>
+            <div class="eat">
+              <section class="eat_info"></section>
+              <div class="eatery_pic">
+                <img
+                  src="/Images/eatery.jpg.jpg"
+                  alt="Photo of a nice eatery"
+                />
+              </div>
+            </div>
+          </section>
+        </section>
+        <div class="button_div">
+          <button id="trip_submit">Save Trip</button>
+        </div>
+      </div>
+      <section class="aside"></section>
+    </main>
 
     <script type="module" src="./scripts/main.js"></script>
   </body>
