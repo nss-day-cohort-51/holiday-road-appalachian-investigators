@@ -5,6 +5,7 @@ import { getSinglePark } from "../parks/ParkDataManager.js"
 export const asideCard = (park, eatery, attraction) => {
    const tripsPostEntryElement = document.querySelector(".aside")
    const asidePost = `
+   <div class="postCard">
  <div>
       <h3>  
          ${park.data[0].states},
@@ -20,6 +21,7 @@ export const asideCard = (park, eatery, attraction) => {
       <h3>
          ${attraction.name}
       </h3>
+ </div>  
  </div>  
      `
      tripsPostEntryElement.innerHTML += asidePost

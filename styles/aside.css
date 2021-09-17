@@ -1,0 +1,30 @@
+
+.aside{
+    border-radius: 10px;
+    padding: 10px;
+    width: 25%;
+    background-color: gainsboro;
+}
+
+.postCard{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 10px;
+    border: solid ;
+    background-color: rgb(130, 230, 255) ;
+    color: rgb(0, 0, 0);
+}
+
+.postCard:hover {
+
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+	transform: translateY(-0.25em); 
+}
+
+/* .aside_title{
+
+    text-align: center;
+} */
