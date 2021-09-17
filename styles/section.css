@@ -1,0 +1,146 @@
+/* GLOBAL SECTION  */
+
+.main_sec {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+.aside {
+  width: 25%;
+}
+
+.selections_sec {
+  display: flex;
+  flex-direction: row;
+}
+.dropdown {
+  margin-top: 15px;
+  margin-left: 30px;
+  border-radius: 10px;
+  width: 300px;
+  height: 25px;
+}
+
+/* STATE SECTION  */
+.state_div {
+  margin-left: 20px;
+}
+.states_sec {
+  padding-bottom: 25px;
+  border-radius: 10px;
+  width: 300px;
+  height: 25px;
+}
+
+/* PARKS SECTION  */
+.first_sec {
+  background-color: lightgray;
+  margin: 20px;
+}
+.park_info {
+  width: 70%;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+}
+
+.weather_list {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.image_sec img {
+  width: 600px;
+  height: 350px;
+  margin-left: 15px;
+}
+.park_data h2 {
+  width: 650px;
+  margin-left: 20px;
+}
+.park_data p {
+  margin-left: 20px;
+}
+.park_data h3 {
+  margin-left: 20px;
+}
+
+/* ATTRACTION SECTION  */
+.second_sec {
+  background-color: lightgray;
+  margin: 20px;
+}
+.atsec {
+  width: 70%;
+  height: 400px;
+}
+.attraction_header h2 {
+  width: 650px;
+}
+.attraction {
+  display: flex;
+  flex-direction: row;
+}
+
+.attraction_pic img {
+  width: 600px;
+  height: 350px;
+  margin-left: 15px;
+}
+
+.attraction_header h2 {
+  margin-left: 20px;
+}
+.attraction_header p {
+  margin-left: 20px;
+}
+.attraction_header h3 {
+  margin-left: 20px;
+}
+/* EATERY SECTION  */
+.third_sec {
+  background-color: lightgray;
+  margin: 20px;
+}
+.eatsec {
+  width: 700px;
+  height: 400px;
+}
+.eat_header h2 {
+  width: 650px;
+}
+.eat {
+  display: flex;
+  flex-direction: row;
+}
+.eatery_pic img {
+  width: 600px;
+  height: 350px;
+  margin-left: 15px;
+}
+.eat_info div h2 {
+  width: 650px;
+}
+.eat_info h2 {
+  margin-left: 20px;
+}
+.eat_info h3 {
+  margin-left: 20px;
+}
+.eat_info p {
+  margin-left: 20px;
+}
+
+/* BUTTON SECTION  */
+
+#trip_submit {
+  width: 160px;
+  height: 25px;
+  border-radius: 5px;
+  border-style: none;
+  background-color: lightseagreen;
+}
+.button_div {
+  display: flex;
+  justify-content: center;
+}
